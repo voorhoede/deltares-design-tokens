@@ -1,0 +1,28 @@
+{
+  "name": "deltares-design-tokens",
+  "version": "1.0.0",
+  "description": "Deltares Design Tokens to theme your Deltares product.",
+  "main": "src/tokens.js",
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir -p dist/",
+    "build": "npm run build:json && npm run build:formats",
+    "build:json": "./bin/list-tokens.js >> dist/tokens.json",
+    "build:formats": "theo dist/tokens.json --format custom-properties.css,cssmodules.css,scss,map.scss,less,styl,module.js,common.js,android.xml,ios.json,html --dest dist/",
+    "start": "npx serve dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voorhoede/deltares-design-tokens.git"
+  },
+  "keywords": [],
+  "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voorhoede/deltares-design-tokens/issues"
+  },
+  "homepage": "https://github.com/voorhoede/deltares-design-tokens#readme",
+  "devDependencies": {
+    "theo": "^8.1.4"
+  }
+}
