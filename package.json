@@ -1,8 +1,11 @@
 {
-  "name": "deltares-design-tokens",
+  "name": "@voorhoede/deltares-design-tokens",
   "version": "1.0.0",
   "description": "Deltares Design Tokens to theme your Deltares product.",
-  "main": "src/tokens.js",
+  "main": "dist/tokens.json",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "prebuild": "rm -rf dist && mkdir -p dist/",
     "build": "npm run build:json && npm run build:formats",
