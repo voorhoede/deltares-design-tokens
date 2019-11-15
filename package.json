@@ -1,6 +1,6 @@
 {
   "name": "@voorhoede/deltares-design-tokens",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Deltares Design Tokens to theme your Deltares product.",
   "main": "dist/tokens.module.js",
   "files": [
