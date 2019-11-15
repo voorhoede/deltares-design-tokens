@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     black100: '#000000',
     blue: '#0ab6ff',
     blue100: '#008fc5',

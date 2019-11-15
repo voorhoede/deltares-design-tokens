@@ -2,15 +2,13 @@
   "name": "@voorhoede/deltares-design-tokens",
   "version": "1.0.4",
   "description": "Deltares Design Tokens to theme your Deltares product.",
-  "main": "dist/tokens.module.js",
-  "files": [
-    "dist/*"
-  ],
+  "main": "dist",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir -p dist/",
-    "build": "npm run build:json && npm run build:formats",
-    "build:json": "./bin/list-tokens.js >> dist/tokens.json",
-    "build:formats": "theo dist/tokens.json --format custom-properties.css,cssmodules.css,scss,map.scss,less,styl,module.js,common.js,android.xml,ios.json,html --dest dist/",
+    "build": "npm run build:json && npm run build:light && npm run build:dark",
+    "build:json": "./bin/list-tokens.js",
+    "build:light": "theo dist/light/tokens.json --format custom-properties.css,cssmodules.css,scss,map.scss,less,styl,module.js,common.js,android.xml,ios.json,html --dest dist/light",
+    "build:dark": "theo dist/dark/tokens.json --format custom-properties.css,cssmodules.css,scss,map.scss,less,styl,module.js,common.js,android.xml,ios.json,html --dest dist/dark",
     "start": "npx serve dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
